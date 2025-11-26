@@ -66,7 +66,7 @@ def ReadInFirst12Lines(filename):
 # this builds the output file name using pi last name and accounting start date
 def CreateOutPutFileName(outputData: OutPutClass):
     # hard coded folder where the new files will be saved
-    OutputDirectory = r"C:\Users\seth.trimberger\Documents\Grant Expense Detail\Output"
+    OutputDirectory = r"OutPut"
 
     # grab pi name and try to pull just the last name
     pi_full = outputData.Principal_Investigator.strip()
@@ -152,7 +152,7 @@ def SelectExcellFiles():
     thisRoot.withdraw()
 
     filePaths = filedialog.askopenfilenames(
-        initialdir=r"C:\Users\seth.trimberger\Documents\Grant Expense Detail",
+        initialdir=r"OutPut",
         title="select the excell files to run: ",
         filetypes=[("excell files", ".xlsx")]
     )
